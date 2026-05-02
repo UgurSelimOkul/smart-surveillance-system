@@ -1,0 +1,138 @@
+/* style.qss */
+
+/* Genel Pencere ve Zemin */
+QMainWindow { 
+    background-color: #050505; 
+    color: #FFFFFF;
+    font-family: 'Consolas', 'Tahoma', sans-serif;
+    font-size: 15px; 
+}
+
+/* Genel Label rengi */
+QLabel {
+    color: #FFFFFF;
+}
+
+/* Sol Menü (Sidebar) */
+#Sidebar { 
+    background-color: #101010; 
+    border-right: 5px solid #00FFFF;
+    padding: 15px 10px; 
+}
+
+/* Ana İçerik Alanı */
+#ContentArea { 
+    background-color: #050505; 
+    padding: 15px; 
+    color: #FFFFFF;
+}
+
+/* Menü Başlığı */
+#MenuTitle {
+    color: #00FFFF;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00FFFF;
+    margin-bottom: 30px;
+}
+
+/* Butonlar */
+QPushButton { 
+    background-color: #202020; 
+    color: #F0F0F0; 
+    border: 1px solid #444444; 
+    padding: 18px 10px; 
+    font-size: 16px; 
+    border-radius: 2px; 
+    text-align: left; 
+    font-weight: bold;
+}
+QPushButton:hover { 
+    background-color: #007ACC; 
+    border: 1px solid #00FFFF; 
+}
+
+/* Kamera Konteyneri */
+QFrame#CameraContainer { 
+    background-color: #101010;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+/* Anomali durumuna göre çerçeve rengi */
+QFrame[anomaly_active="false"] { 
+    border: 3px solid #00FFFF; /* normal */
+}
+QFrame[anomaly_active="true"] { 
+    border: 5px solid #FF0000; /* kritik */
+}
+
+/* Kamera Label */
+#CameraLabel { 
+    background-color: #000000; 
+    color: #00FFFF; 
+    font-size: 18px; 
+    border: none;
+    padding: 0;
+}
+
+/* Kamera başlıkları (label) */
+#CameraHeader {
+    background-color: #00FFFF; 
+    color: #FFFFFF; 
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+/* Uyarı Listesi */
+QListWidget { 
+    background-color: #101010; 
+    border: 3px solid #00FFFF; 
+    color: #00FFFF; 
+    font-size: 16px; 
+    padding: 10px;
+}
+
+/* Uyarı Başlığı */
+#WarningTitle { 
+    color: #FFD700; 
+    font-size: 22px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    padding: 5px 0;
+    border-bottom: 1px solid #FFD700; 
+}
+
+/* Alarm Kontrol Butonu (property'ye göre) */
+#AlarmControlBtn[alarm_active="true"] {
+    background-color: #CC0000; 
+    border: 3px solid #FF0000;
+    color: #FFFFFF;
+}
+#AlarmControlBtn[alarm_active="false"] {
+    background-color: #008000; 
+    border: 3px solid #00FF00;
+    color: #FFFFFF;
+}
+#AlarmControlBtn:hover {
+    background-color: #0A7A0A; /* aktif değilken bir ton koyu; aktif için istenirse ayrı hover yazılabilir */
+}
+
+/* Büyütme butonu: class property ile seç */
+QPushButton[class="MaximizeButton"] {
+    background-color: rgba(16, 16, 16, 180);
+    color: #00FFFF;
+    border: 1px solid #00FFFF;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+}
+QPushButton[class="MaximizeButton"]:hover {
+    background-color: #007ACC;
+    border: 1px solid #00FFFF;
+    color: #FFFFFF;
+}
